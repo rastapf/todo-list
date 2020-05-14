@@ -17,11 +17,19 @@ const taskInput = document.querySelector('#novaTarefa')
 
     function addTask() {
         text = taskInput.value
-        boardDiv.innerHTML += `
-            <div class="tarefa">
-                <div class="col-md-8">${text}</div>
-                <div class="col-md-2"><img class="icon" src="img/check.png"></div>
-            </div>
-        `
-        taskInput.value = ""
+        if(text.trim() != "") {
+            boardDiv.innerHTML += `
+                <div class="tarefa">
+                    <div class="col-md-8">${text}</div>
+                    <div class="col-md-2"><img class="icon" src="img/check.png"></div>
+                </div>
+            `
+            taskInput.value = ""
+            taskInput.style.borderColor = 'black'
+            return;
+        } else {
+            alert("Descrição da tarefa não pode estar vazia")
+            taskInput.style.borderColor = 'red'
+            return;
+        }
     }

@@ -5,3 +5,4 @@
 - Nova tarefa pode ser adicionada utilizando o botão "+"
 - Input deve ser limpo após inclusão da nova tarefa
 - Tarefa deve ser excluída ao clicar sobre o card
+- Inputs vazios devem emitir um alerta e alterar cor da borda
